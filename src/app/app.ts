@@ -1,9 +1,17 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet} from '@angular/router';
+import { Header } from './header/header';
+import { Footer } from './footer/footer';  
+//Navigation is inside Header component 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    Header,
+    Footer, 
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
