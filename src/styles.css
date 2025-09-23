@@ -263,9 +263,9 @@ section {
     width: 61.8%;
 }
 
-.col-38 {
+/*.col-38 {
     width: 38.2%;
-}
+}*/
 
 /* --------- 2.1 Header --------- */
 
@@ -683,6 +683,59 @@ h6 {
     padding-bottom: 100px;
 }
 
+/* Grid Layout for Choice Items */
+.grid-choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 2rem; /* Space between the rows/columns */
+}
+
+/* Each individual choice (input + radio button) */
+.grid-choice > div {
+  display: flex;
+  align-items: center; /* Align input and radio button */
+  gap: 1rem; /* Space between the input and the radio button */
+}
+
+.label-boxes {
+  background-color: #ffdb39; /*ffdb39 3691ed*/
+  padding: 10px;  
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  border-style: solid; 
+  border-width: 1px;
+  border-color: #111;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.label-boxes:hover {
+  background-color: #ffe25c;  /*50a2f5*/
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle depth */
+  /*background: linear-gradient(135deg, #ffe25c, #ffd633);*/
+}
+
+.label-boxes.selected {
+  background-color: #39ca3d; 
+  color: #fff;
+  transform: scale(1.03);
+}
+
+.grid-choice-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the choices*/
+  gap: 10px; /* Space between each choice */
+}
+
+.grid-container  {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-between;
+
+}
+
 #banner h1 {
     padding-top: 5%;
 }
@@ -697,6 +750,7 @@ h6 {
 
 .header-block-content {
     background: #faf6f0;
+    width: 80%;
     text-align: center;
     padding: 25px 0 25px 0;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
@@ -733,9 +787,62 @@ h6 {
 
 .form-group {
     text-align: left;
-    /*padding: 5px 2 5px 0;*/
     margin-left: 10px;
     margin-right: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  input, select, button {
+    font-size: 1rem;
+  }
+
+  #banner h1 {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-size:52px;
+    line-height:60px;
+    font-weight:600;
+    color:#111;
+}
+
+#banner h2 {
+    width: 60%;
+}
+
+/* Change grid layout to 1 column (single input per row) */
+  .grid-choice {
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 0.5rem; /* Smaller space between rows/columns */
+  }
+
+  /* Adjust the individual choice container for mobile */
+  .grid-choice > div {
+    gap: 0.5rem; /* Less space between input and radio button */
+  }
+
+  .header-block-content {
+    background: #faf6f0;
+    width: 60%;
+    text-align: center;
+    padding: 25px 0 25px 0;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+    position: relative;
+    border: 2px solid #11161c;
+    margin-left: 20%;
+    margin-bottom: 10px;
+  }
+
+  /* Reduce font size or padding for mobile */
+  input {
+    font-size: 10px; /* Slightly smaller text */
+    padding: 8px; /* Smaller padding */
+  }
+
+  /* Checkbox */
+  .check-box {
+    margin-left: auto; 
+    accent-color: #111;
+  }
 }
 
 /*------------------------------------------------------------------------------------------*/
@@ -853,9 +960,9 @@ h6 {
 
 /* --------- 6.1 Introduction ---------- */
 
-.introduction img.featured {
+/*.introduction img.featured {
     padding: 55px 0 0 0;
-}
+}*/
 
 /* --------- 6.2 Features ---------- */
 
@@ -908,9 +1015,9 @@ h6 {
     background: #faf6f0;
     padding: 25px 0 25px 0;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
-    transition: all 0.2s ease-in-out 0s;
     position: relative;
     border: 2px solid #11161c;
+    width: 100%;
 }
 
 .pricing-block-content h4 {
@@ -1591,7 +1698,7 @@ body {
 
 #banner h1 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size:62px;
+    font-size:52px;
     line-height:60px;
     font-weight:800;
     color:#111;
