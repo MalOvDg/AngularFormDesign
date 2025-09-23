@@ -1,10 +1,11 @@
 # AngularForm
 
-## Purpose
+## Purpose - Design idéa
 
 • This project contain a design idéa, with borrowed color palett from Parlametric and additional colors for effect. 
 • A 2-page application routing: between landingpage ('Build a Form') & viewform ('Besvara Formulär').
 • Design inspiration from Parlametric website, color palett in "Inspiration design file".
+• Not functionality focus 
 
 ________________
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
