@@ -9,5 +9,13 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
+  isResponsive = false;
 
+  toggleNavbar(): void {
+    this.isResponsive = !this.isResponsive;
+  }
+
+  closeMenu(): void {
+    this.isResponsive = false;
+  }
 }

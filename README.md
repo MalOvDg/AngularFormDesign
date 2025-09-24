@@ -7,6 +7,11 @@
 • Design inspiration from Parlametric website, color palett in "Inspiration design file".
 • Not functionality focus 
 
+Updates:
+Responsive forms
+Responsive Menu
+
+
 ________________
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.1.
 ________________

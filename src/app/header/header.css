@@ -1,0 +1,118 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background-color: #333;
+      color: #fff;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-weight: bold;
+      font-size: 40px;
+      background: linear-gradient(90deg, #ffb600, #faf6f0, #d2b356, #ffe25c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: wheat;
+      padding: 0.5rem;
+      display: block;
+    }
+
+    .menu a:hover {
+      color:#d2b356;
+      opacity: 0.6;
+    }
+
+    /* Dropdown styles */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      min-width: 150px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+
+    .menu li:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Hamburger styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 1%;
+        z-index: 1000;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .menu li {
+        border-top: 1px solid #444;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
